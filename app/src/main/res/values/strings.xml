@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RvMusic</string>
+
+    <string name="music_act">音乐界面</string>
+    <string name="wallet">定时关闭</string>
+    <string name="rv">定时关闭</string>
+    <string name="finish_a">退出</string>
+    <string name="song">歌曲</string>
+    <string name="singer">歌手</string>
+
+</resources>

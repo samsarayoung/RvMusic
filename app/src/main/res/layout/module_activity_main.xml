@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start"
+    >
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+   <android.support.design.widget.AppBarLayout
+       android:id="@+id/appbar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+      >
+      <!--
+           <android.support.v7.widget.Toolbar
+               xmlns:android="http://schemas.android.com/apk/res/android"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="?attr/colorPrimaryDark"
+               android:minHeight="?attr/actionBarSize"
+               android:id="@+id/toolbar"
+               app:layout_scrollFlags="scroll|enterAlways">
+
+           </android.support.v7.widget.Toolbar>
+
+                -->
+         <include layout="@layout/module_include_toolbar"
+                  android:id="@+id/toolbar"
+                  app:layout_scrollFlags="scroll|enterAlways"
+      />
+
+       <android.support.design.widget.TabLayout
+           android:id="@+id/tabLayouts"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="?attr/colorPrimaryDark"
+           app:tabMode="scrollable"
+           app:tabSelectedTextColor="@color/colorAccent"
+           app:tabTextColor="@color/colorPrimary"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        />
+ </android.support.design.widget.CoordinatorLayout>
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/main_header_layout"
+        app:menu="@menu/menu_sideslip"/>
+ </android.support.v4.widget.DrawerLayout>
